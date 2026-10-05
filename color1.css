@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding-top: 50px; /* เผื่อความสูงของ toptap */
+}
+/* ---------- toptap ---------- */
+.toptap {
+    background-color: #f8500a;
+    width: 100%;
+    margin: 0%;
+    display: flex; /* วางในแนวนอน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    position: fixed;        /* ทำให้ลอยอยู่กับที่ */
+    top: 0;                 /* ชิดด้านบน */
+    left: 0;                /* ชิดด้านซ้าย */
+    z-index: 1000;          /* กันไม่ให้ถูกบัง */
+    text-align: center;
+    justify-content: space-between; /* โลโก้ซ้าย ปุ่มขวา */
+}
+
+.taplogo {
+    width: 20%;
+    font-size: 20px;
+    display: flex;              /* วางในแนวนอน */
+    align-items: center;        /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    justify-content: center;    /* จัดให้อยู่กึ่งกลางแนวนอน */
+    gap: 10px;                  /* ระยะห่างระหว่าง logo กับตัวหนังสือ */
+}
+
+.tapbutton {
+    width: 80%;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 360%;
+}
+
+.buttontap {
+    width: 19%;
+    height: 50px;
+    font-size: 24px;
+    background-color:#f8500a;
+    border:none;
+}
+
+.buttontap:hover {
+    background-color: #1f2f40;  /* สีเมื่อชี้เมาส์ */
+    color: rgb(255, 255, 255);  /* เปลี่ยนตัวอักษรเป็นสีดำ */
+}
+/* ---------- lefttap ---------- */
+.lefttap {
+    background-color: #1f2f40;
+    width: 20%;
+    height: 100vh;        /* ให้เต็มหน้าจอแนวตั้ง */
+    position: fixed;
+    top: 50px;            /* เลื่อนลงมาพอดีกับ toptap */
+    z-index: 999;         /* อยู่ใต้ toptap */
+    background-color: #0f2238;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;   /* เรียงในแนวตั้ง */
+    overflow-y: auto; /* เพิ่ม scroll */
+}
+
+.mlt{
+    height: 90%;
+}
+.blt {
+    height: 10%;
+}
+.buttonlefttap {
+    width: 100%;
+    height: 50%;
+    font-size: 24px;
+    background-color: #0f2238;
+    color: white;
+    border:none;
+}
+
+.buttonlefttap:hover {
+    background-color:#f8500a;  /* สีเมื่อชี้เมาส์ */
+    color: black;
+}
+
+a {
+    font-size: 24px;
+    color: gray;
+    text-decoration: none;
+}
+
+/* ---------- Product ---------- */
+.boxpop {
+    width: 75%;              /* เหลือข้างซ้าย 20% + gap */
+    margin-left: 22%;        /* เว้นระยะจาก lefttap */
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    background: rgb(170, 170, 170);
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: 5px solid gray; /* เส้นรอบกรอบ */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px) {
+    /* Sidebar เล็กลง */
+    .lefttap {
+        width: 25%;
+        font-size: 20px;
+    }
+
+    /* กล่องสินค้า */
+    .boxpop {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 27%;
+        width: 70%;
+    }
+
+    .product {
+        font-size: 16px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .lefttap {
+        width: 30%;
+        font-size: 18px;
+    }
+
+    .boxpop {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 32%;
+        width: 65%;
+    }
+
+    .product {
+        font-size: 14px;
+    }
+
+    .buttontap {
+        font-size: 18px;
+    }
+
+    .taplogo {
+        font-size: 18px;
+    }
+
+    .toptap {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ให้ sidebar ขึ้นด้านบนแทน */
+    .lefttap {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+        font-size: 16px;
+        flex-direction: column; /* โลโก้ขึ้นบน ปุ่มลงล่าง */
+    }
+
+    .buttonlefttap {
+        width: auto;
+        font-size: 16px;
+        height: 35px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    /* กล่องสินค้าเป็น 1 คอลัมน์ */
+    .boxpop {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .product {
+        font-size: 14px;
+        width: 90%;
+    }
+}

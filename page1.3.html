@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>กางเกงขาสั้น</title>
+    <link rel="stylesheet" href="color1.css">
+</head>
+
+<body>
+    <div class="toptap">
+        <div class="taplogo">
+            <img src="Logo.jpg" alt="โลโก้" class="logo">
+            <p>ChicCraze</p>
+        </div>
+        <div class="tapbutton">
+            <button onclick="navigateToPage('page1.html')" class="buttontap">เสื้อผ้าผู้หญิง</button>
+            <button onclick="navigateToPage('page2.html')" class="buttontap">เสื้อผ้าผู้ชาย</button>
+            <button onclick="navigateToPage('page3.html')" class="buttontap">กระเป๋า</button>
+            <button onclick="navigateToPage('page4.html')" class="buttontap">รองเท้า</button>
+            <button onclick="navigateToPage('page5.html')" class="buttontap">เครื่องประดับ</button>
+        </div>
+    </div>
+
+    <!-- ฟังก์ชัน JS -->
+    <script>
+        function navigateToPage(url) {
+            window.location.href = url;  // ไปยังหน้าที่กำหนด
+        }
+    </script>
+
+    <div class="lefttap">
+        <div class="mlt">
+            <ul>เสื้อผ้า
+                <li><a href="page1.html">เสื้อ</a></li>
+                <li><a href="page1.1.html">เดรส</a></li>
+            </ul>
+            <ul>กางเกง
+                <li><a href="page1.2.html">กางเกงขายาว</a></li>
+                <li><a href="page1.3.html">กางเกงขาสั้น</a></li>
+            </ul>
+            <ul>กระโปรง
+                <li><a href="page1.4.html">กระโปรงยาว</a></li>
+                <li><a href="page1.5.html">กระโปรงสั้น</a></li>
+            </ul>
+        </div>
+        <div class="blt">
+            <button onclick="navigateToPage('ChicCraze.html')" class="buttonlefttap">หน้าหลัก</button>
+        </div>
+    </div>
+
+
+    <div class="boxpop">
+        <div class="product">
+            <img src="https://i.pinimg.com/736x/06/38/a2/0638a2fb41252499af83953ccf1b2d57.jpg" alt="สินค้า">
+            <p>ราคา 100 บาท</p>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/736x/67/ee/97/67ee97b61149633299a24b721364f8ff.jpg" alt="สินค้า">
+            <p>ราคา 129 บาท</p>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/736x/5c/8d/7f/5c8d7f6f436be3dde155948f8bb518fe.jpg" alt="สินค้า">
+            <p>ราคา 129 บาท</p>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/1200x/9d/34/26/9d342680b08941d0a6475209e3defa56.jpg" alt="สินค้า">
+            <p>ราคา 149 บาท</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

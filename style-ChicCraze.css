@@ -1,0 +1,81 @@
+/* ตั้งค่าทั่วไป */
+body {
+  height: 100;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* กล่องชอปปิ้งออนไลน์ */
+.promo-banner {
+  background-image: url('Chic.jpg');
+  background-size: cover;  /*ปรับให้เต็มจอ*/
+  background-position: center;  /*จัดตรงกลาง*/
+  background-repeat: no-repeat;
+  height: 100vh;  /*สูงเท่าหน้าจอ*/
+  width: 100%;  /*กว้างตามจอ*/
+  position: relative;
+  color: #ffffff;
+}
+
+/* กล่องข้อความชอปปิ้ง */
+.promo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(133, 131, 131, 0.4); /*โปรงใส*/
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  box-shadow: rgba(255, 255, 255, 0.4); /*เงาความสว่าง*/
+}
+
+.promo-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.promo-text p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* ปุ่มเข้าสู่ระบบ */
+.promo-button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #ff7700;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: #777777;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .promo-banner {
+    padding: 15px 20px;
+    max-width: 95%;
+  }
+
+  .promo-text h1 {
+    font-size: 2rem;
+  }
+
+  .promo-text p {
+    font-size: 1rem;
+  }
+
+  .promo-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
